@@ -44,7 +44,10 @@ private void Update(){
 }
 
 private void FixedUpdate(){
-    MovePlayer();
+    if(!Input.GetKey(KeyCode.E)){
+        
+        MovePlayer();
+    }
 }
 private void MyInput()
 {

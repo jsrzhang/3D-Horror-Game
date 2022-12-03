@@ -5,6 +5,10 @@ using UnityEngine;
 public class lighting : MonoBehaviour
 {
     Light playerLight; 
+    public Color white;
+    public Color Red;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +23,13 @@ public class lighting : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E)){
              playerLight.range= 10f; 
+             playerLight.color = Color.white;
+             
         // value 0-8 light intensity is mult with light colour 
         }
         else{
             playerLight.range= 4f; 
+            playerLight.color = Color.red;
         }
     }
 }

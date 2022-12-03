@@ -24,8 +24,8 @@ public class cameraMove : MonoBehaviour
     {
 
         //mouse input call
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * sensX;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * sensY;
 
         yRot += mouseX; // adds x mouse movement to y
         xRot -= mouseY; // subs y mouse movement from x
@@ -33,5 +33,7 @@ public class cameraMove : MonoBehaviour
 
         xRot = Mathf.Clamp(xRot, -90f,90f); //clamp sets a range so u cant look more than straight up
         transform.rotation= Quaternion.Euler(xRot,yRot,0); // rotation use quaternion euler.
-    }
+   
+        orientation.rotation = Quaternion.Euler(0,yRot,0);
+   }
 }
