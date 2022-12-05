@@ -32,7 +32,7 @@ public class enemyFollow : MonoBehaviour
 
         }
         else {
-           enemy.speed =1f;
+           enemy.speed =0.5f;
            if (myCam.fieldOfView < 80){
                 myCam.fieldOfView = Mathf.Lerp(myCam.fieldOfView, 80, t *Time.deltaTime);
            }

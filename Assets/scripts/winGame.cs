@@ -8,10 +8,7 @@ public class winGame : MonoBehaviour
     // Start is called before the first frame update
 
     // Update is called once per frame
-    void Update()
-    {
-       void OnTriggerEnter(Collider other) {
-            SceneManager.LoadScene("menu");
-        }  
-    }
+    private void OnTriggerEnter(Collider other) {
+        SceneManager.LoadScene("game");
+        }
 }
