@@ -23,7 +23,7 @@ public class enemyFollow : MonoBehaviour
         enemy.SetDestination(player.position);
       var  distance = Vector3.Distance(player.transform.position, enemy.transform.position);
   
-         if(distance < 4){
+         if(distance < 3){
             enemy.speed =10f;
             enemy.angularSpeed =10f;
             if (myCam.fieldOfView > 50){
@@ -32,7 +32,7 @@ public class enemyFollow : MonoBehaviour
 
         }
         else {
-           enemy.speed =0.5f;
+           enemy.speed =1f;
            if (myCam.fieldOfView < 80){
                 myCam.fieldOfView = Mathf.Lerp(myCam.fieldOfView, 80, t *Time.deltaTime);
            }

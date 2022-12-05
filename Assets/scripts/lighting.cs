@@ -5,15 +5,23 @@ using UnityEngine;
 public class lighting : MonoBehaviour
 {
     Light playerLight; 
+    public GameObject light1;
+    public GameObject light2;
+    public GameObject light3;
+    public GameObject light4;
+    public GameObject light5;
+
     public Color white;
     public Color Red;
+
+   
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerLight = GetComponent<Light>();
-        playerLight.range= 3; 
+        playerLight.range= 3.5f; 
 
         // Mathf.PingPong(Time.time, 1);  if you want flashing
     }
@@ -24,12 +32,26 @@ public class lighting : MonoBehaviour
         if (Input.GetKey(KeyCode.E)){
              playerLight.range= 10f; 
              playerLight.color = Color.white;
+
+             light1.SetActive(true);
+             light2.SetActive(true);
+             light3.SetActive(true);
+             light4.SetActive(true);
+             light5.SetActive(true);
+          
              
         // value 0-8 light intensity is mult with light colour 
         }
         else{
-            playerLight.range= 4f; 
+            playerLight.range= 3.5f; 
             playerLight.color = Color.red;
+
+             light1.SetActive(false);
+             light2.SetActive(false);
+             light3.SetActive(false);
+             light4.SetActive(false);
+             light5.SetActive(false);
         }
     }
 }
+ 
