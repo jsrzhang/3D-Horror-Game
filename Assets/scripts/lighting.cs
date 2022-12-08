@@ -5,7 +5,7 @@ using UnityEngine;
 public class lighting : MonoBehaviour
 {
     Light playerLight; 
-    public GameObject light1;
+    public GameObject light1; // all lights in scene minus blue overhead
     public GameObject light2;
     public GameObject light3;
     public GameObject light4;
@@ -30,10 +30,10 @@ public class lighting : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.E)){
-             playerLight.range= 10f; 
-             playerLight.color = Color.white;
+             playerLight.range= 10f; // increase player sight range
+             playerLight.color = Color.white; // change player light white
 
-             light1.SetActive(true);
+             light1.SetActive(true); // turn on scene lights
              light2.SetActive(true);
              light3.SetActive(true);
              light4.SetActive(true);
@@ -44,9 +44,9 @@ public class lighting : MonoBehaviour
         }
         else{
             playerLight.range= 3.5f; 
-            playerLight.color = Color.red;
+            playerLight.color = Color.red; // change light colour back
 
-             light1.SetActive(false);
+             light1.SetActive(false); // turn off scene lights
              light2.SetActive(false);
              light3.SetActive(false);
              light4.SetActive(false);

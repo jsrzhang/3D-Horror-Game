@@ -7,7 +7,7 @@ public class dead : MonoBehaviour
 {
 
     private void OnTriggerEnter(Collider other) {
-    SceneManager.LoadScene("game");
+    SceneManager.LoadScene("game"); // resets to start
     }
 
 

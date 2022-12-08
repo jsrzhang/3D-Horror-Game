@@ -17,14 +17,14 @@ public class movement : MonoBehaviour
      public Transform orientation;
 
     float hor;
-     float vert;
+    float vert;
 
     Vector3 moveDirection;
      Rigidbody rb;
 
 private void Start(){
-    rb = GetComponent<Rigidbody>();
-    rb.freezeRotation = true;
+    rb = GetComponent<Rigidbody>(); // gets rigidbody
+    rb.freezeRotation = true; // stops rotation
    
 }
 //

@@ -15,7 +15,7 @@ public class enemyAlpha : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.E)){
+        if(Input.GetKey(KeyCode.E)){ // switch enemy material to a see through one this method was easier for one enemy.
            rend.sharedMaterial = material[1];
         }
         else{

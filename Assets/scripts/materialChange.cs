@@ -13,16 +13,16 @@ public class materialChange : MonoBehaviour
      void Update()
      {
          tex = GameObject.FindGameObjectsWithTag("closedTex");
-        if (Input.GetKey(KeyCode.E)){
+        if (Input.GetKey(KeyCode.E)){ // mat is see through
             foreach(GameObject closedTex in tex) //access them individually 
                 {
                     Renderer r = closedTex.GetComponent<Renderer>();
-                    Color newColor = r.material.color;
-                    newColor.a = 0.1f;
+                    Color newColor = r.material.color; // estab new color for mat
+                    newColor.a = 0.1f; // change alpha
                     r.material.color = newColor;
             } 
         }
-        else{
+        else{ // mat is solid 1f
             foreach(GameObject closedTex in tex) //access them individually 
                 {
                     Renderer r = closedTex.GetComponent<Renderer>();
